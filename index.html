@@ -9,10 +9,10 @@
 </head>
 
 <body>
-  <div class="trending-banner">
+  <div class="trending-banner" style="background-color: rgb(36, 36, 113);">
     <div class="trending-text">
-      <span class="trending-label">Trending:</span>
-      <marquee class="trending-marquee" behavior="scroll" direction="left">
+      <span class="trending-label" style="color: white;">Trending:</span>
+      <marquee class="trending-marquee" behavior="scroll" direction="left" style="color: white;">
         Breaking News: Stock market hits new highs | New vaccine rollout announced | Tech giants report record earnings |
         Global warming initiatives take center stage | Sports updates: Football finals this weekend
       </marquee>
@@ -20,40 +20,58 @@
   </div>
   
   <div class="navbar">
-    <table>
-      <tr class="nav1">
-        <div class="googleLogo">
-          <td>
-            <img id="googleimage" src="./google.png" alt="" />
-          </td>
-          <td id="newsheading">
-            <h1>News</h1>
-          </td>
-        </div>
-
-        <td>
-          <input type="text" placeholder="Search for news" class="input-with-icon" id="searchInput"/>
-          <button class="btn" id="search" style="cursor: pointer;">Search</button>
-        </td>
-      </tr>
-      <tr class="nav2">
-        <td style="margin-left: 10px" style="cursor: pointer;" id="Home">Home</td>
-        <td id="For you" style="cursor: pointer;">For you</td>
-        <td id="Following" style="cursor: pointer;">Following</td>
-        <td id="NewsShowcase" style="cursor: pointer;">NewsShowcase</td>
-        <td>|</td>
-        <td id="India" style="cursor: pointer;">India</td>
-        <td id="World" style="cursor: pointer;">World</td>
-        <td id="Local" style="cursor: pointer;">Local</td>
-        <td id="Business" style="cursor: pointer;">Business</td>
-        <td id="Technology" style="cursor: pointer;">Technology</td>
-        <td id="Entertainment" style="cursor: pointer;">Entertainment</td>
-        <td id="Sports" style="cursor: pointer;">Sports</td>
-        <td id="Science" style="cursor: pointer;">Science</td>
-        <td id="Health" style="cursor: pointer;">Health</td>
-      </tr>
-    </table>
+    <!-- Search Bar Section -->
+    <div class="search-bar">
+      <div class="googleLogo">
+        <img id="googleimage" src="./google.png" alt="Google Logo" />
+        <h1 id="newsheading">News</h1>
+      </div>
+      <div class="search-input">
+        <input type="text" placeholder="Search for news" class="input-with-icon" id="searchInput" />
+        <button class="btn" id="search" style="cursor: pointer;">Search</button>
+      </div>
+    </div>
+    
+    <!-- Navigation Links Section -->
+    <div class="nav-links">
+      <ul class="nav2">
+        <li><a href="#" id="Home">Home</a></li>
+        <li><a href="#" id="ForYou">For You</a></li>
+        <li><a href="#" id="Following">Following</a></li>
+        <li><a href="#" id="NewsShowcase">News Showcase</a></li>
+        
+        <!-- Vertical separator -->
+        <li class="separator">|</li>
+        
+        <!-- Dropdown for Categories -->
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Categories</a>
+          <div class="dropdown-content">
+            <a href="#" id="India">India</a>
+            <a href="#" id="World">World</a>
+            <a href="#" id="Local">Local</a>
+            <a href="#" id="Business">Business</a>
+            <a href="#" id="Technology">Technology</a>
+            <a href="#" id="Entertainment">Entertainment</a>
+            <a href="#" id="Sports">Sports</a>
+            <a href="#" id="Science">Science</a>
+            <a href="#" id="Health">Health</a>
+          </div>
+        </li>
+        
+        <!-- More Dropdown Example -->
+        <li class="dropdown">
+          <a href="#" class="dropbtn">More</a>
+          <div class="dropdown-content">
+            <a href="#">Weather</a>
+            <a href="#">Opinion</a>
+            <a href="#">Podcasts</a>
+          </div>
+        </li>
+      </ul>
+    </div>
   </div>
+  
   <!--below navbar based on suggestion-->
   <div class="live-section">
     <div class="container">
@@ -88,6 +106,7 @@
               </p>
               <a href="" class="anchorMargin">Click to Read</a>
             </div>
+            
           </td>
           <td>
             <div class="three">

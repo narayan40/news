@@ -84,7 +84,9 @@ const fetchSingleArticle = async (page, q) => {
           <p style="height: 84px; width: 280px; margin-bottom: 120px" class="miniPara para bigTxt">
               ${item.description.slice(0, 350)}...
           </p>
-          <a href="${item.url}" class="anchorMargin" style="margin-top:10px">Click to Read</a>
+          <a href="${
+            item.url
+          }" class="anchorMargin" style="margin-top:10px">Click to Read</a>
           
           `;
       document.querySelector(".ar-6").innerHTML = `
@@ -282,22 +284,26 @@ document.getElementById("next").addEventListener("click", () => {
   fetchNews(currentPage, currentQuery);
 });
 
-
-/*below navbar date time logic*/  
+/*below navbar date time logic*/
 function updateTime() {
-  const timeElement = document.getElementById('time');
-  const dateElement = document.getElementById('date');
+  const timeElement = document.getElementById("time");
+  const dateElement = document.getElementById("date");
 
   const now = new Date();
 
   // Format the time
-  const hours = String(now.getHours()).padStart(2, '0');
-  const minutes = String(now.getMinutes()).padStart(2, '0');
-  const seconds = String(now.getSeconds()).padStart(2, '0');
+  const hours = String(now.getHours()).padStart(2, "0");
+  const minutes = String(now.getMinutes()).padStart(2, "0");
+  const seconds = String(now.getSeconds()).padStart(2, "0");
 
   // Format the date
-  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-  const formattedDate = now.toLocaleDateString('en-US', options);
+  const options = {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  };
+  const formattedDate = now.toLocaleDateString("en-US", options);
 
   // Update the time and date elements
   timeElement.textContent = `${hours}:${minutes}:${seconds}`;
